@@ -1,0 +1,85 @@
+:root {
+
+    --dark: #333;
+    --light: #eee;
+    --white: #fff;
+    --yellow: #fff565;
+    --accent-one: #1f5a66;
+    --accent-two: #1a9aa2;
+    --accent-three: #fcf36a;
+    --accent-dark: #143b43;
+
+    --w: #eee;
+    --g: #666;
+    --b6: rgba(20, 59, 67, 0.6);
+    --b9: rgba(20, 59, 67, 0.9);
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+    color: inherit;
+	font-size: 16px;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+    transition:
+        150ms ease color,
+        150ms ease box-shadow,
+        150ms ease border-color,
+        150ms ease background-color;
+}
+body, html {
+	overflow-x: hidden;
+}
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: var(--white);
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+header {
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+}
+img {
+    width: 100%;
+}
+section {
+    max-width: 1200px;
+    padding: 3vw;
+    margin: auto;
+}
+.logo {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+    margin: auto;
+}
+.main {
+    background-image: url('https://res.cloudinary.com/dbc2wlvk8/image/upload/c_scale,f_auto,h_1180,w_1920/v1552326976/heritage-oaks/andrew-seaman-1372319-unsplash.jpg');
+    height: 80vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+.main > div {
+    padding: 2rem;
+    border-left: 3px solid white;
+    margin-left: 3vw;
+    margin-top: 50vh;
+}
+.main > div h1, .main > div h2{
+    color: white;
+    text-shadow: 1px 1px 3px var(--dark);
+}
