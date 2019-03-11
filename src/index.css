@@ -73,11 +73,16 @@ section {
     background-position: right;
     position: relative;
 }
+.main span {
+    color: var(--accent-one);
+    font-weight: bold;
+    text-transform: uppercase;
+}
 .main > div {
     padding: 2rem;
-    border-left: 3px solid white;
+    border-left: 3px solid var(--accent-one);
     margin-left: 3vw;
-    margin-top: 50vh;
+    margin-top: 57vh;
 }
 .main > div h1, .main > div h2{
     color: white;
