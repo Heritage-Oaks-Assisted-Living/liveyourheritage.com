@@ -21,7 +21,7 @@
     color: inherit;
 	font-size: 16px;
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+	font-family:'Cinzel', serif;
     transition:
         150ms ease color,
         150ms ease box-shadow,
@@ -45,10 +45,19 @@ h2 {
     font-size: 2rem;
     font-weight: lighter;
 }
-p, li, a, label {
-    font-size: 0.9rem;
+h3 {
+    font-size: 1.6rem;
     font-weight: lighter;
-    line-height: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    text-transform: capitalize;
+}
+p, li, a, label {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+    color: inherit;
 }
 header {
     width: 100%;
@@ -72,16 +81,23 @@ form {
     border: 3px solid #d9ded9;
     width: 100%;
 }
-form input {
+form > div {
+    text-align: left;
+    margin: 1rem auto;
+}
+form input, form textarea {
     background: none;
     border: none;
-    border-bottom: 1px solid var(--g)
+    border-bottom: 1px solid var(--g);
+    width: 100%;
+    padding: 6px;
 }
 form label {
     display: block;
     color: var(--g);
     text-align: left;
     margin-left: 3px;
+    text-transform: capitalize;
 }
 .logo {
     border-radius: 6px;
@@ -108,17 +124,20 @@ form label {
     color: white;
     align-items: center;
     padding: 6px;
-    border-left: 3px solid var(--accent-two);
 }
 .number a {
     text-decoration: none;
 }
 .number span {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    vertical-align: middle;
 }
 .number object {
-    height: 1.6rem;
-    fill: white;
+    height: 2.3rem;
+    vertical-align: middle;
+    background-color: white;
+    border: 3px solid var(--accent-one);
+    border-radius: 1px;
 }
 .main {
     background-image: url('https://res.cloudinary.com/dbc2wlvk8/image/upload/e_art:fes/v1552326976/heritage-oaks/andrew-seaman-1372319-unsplash.jpg');
