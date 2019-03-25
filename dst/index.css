@@ -58,6 +58,7 @@ h3 {
     margin-bottom: 1rem;
     font-weight: lighter;
     text-transform: capitalize;
+	font-family: 'Lato';
 }
 p, a, li, label {
     color: inherit;
@@ -71,18 +72,18 @@ img {
     width: 100%;
 }
 form {
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 6px;
-    border: 3px solid #d9ded9;
     width: 100%;
+	padding: 1rem;
+	border-radius: 6px;
+	border-left: 6px solid #d9ded9;
+	background-color: #ffffff;
 }
 input, textarea {
     width: 100%;
     padding: 6px;
     border: none;
     background: none;
-    border-bottom: 1px sold var(--g);
+    border-bottom: 1px solid #d9ded9;
 }
 form > div {
     text-align: left;
@@ -93,16 +94,23 @@ form label {
     color: var(--g);
     text-align: left;
     margin-left: 3px;
+	margin-top: 1rem;
     text-transform: capitalize;
 }
-section {
-    max-width: 1200px;
-    padding: 3vw;
-    margin: auto;
-    text-align: center;
+form h1 {
+	margin: 0;
 }
-section h1 {
-    margin-bottom: 12px;
+section {
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+article {
+	margin: auto;
+    padding: 3vh 3vw;
+    max-width: 1200px;
 }
 .logo {
     left: 3vw;
@@ -160,8 +168,9 @@ section h1 {
 }
 .main span {
     font-weight: bold;
+	color: white;
+	font-size: 1.2rem;
     letter-spacing: 1px;
-    color: var(--accent-two);
     text-transform: uppercase;
 }
 .main-content {
@@ -180,9 +189,35 @@ section h1 {
     background: linear-gradient(195deg, transparent 50%, rgba(101, 124, 143, 0.8) 70%);
 }
 .main-content > * {
-	border-left: 3px solid var(--accent-two);
+	padding-left: 1rem;
+	/* border-left: 3px solid var(--accent-two); */
+	border-left: 3px solid white;
+
 }
 .main > div h1, .main > div h2{
     color: white;
     text-shadow: 1px 1px 3px var(--dark);
+}
+
+.button {
+	display: block;
+	background-color: var(--accent-one);
+	margin-top: 1rem;
+	padding: 1rem;
+	width: initial;
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	border-radius: 3px;
+}
+.button:hover {
+	cursor: pointer;
+}
+
+footer {
+	/* background-color: var(--accent-one); */
+	/* background-color: var(--accent-two); */
+	/* background-color: var(--accent-three); */
+	/* background-color: var(--accent-dark); */
+	background-color: #eceaea;
 }
