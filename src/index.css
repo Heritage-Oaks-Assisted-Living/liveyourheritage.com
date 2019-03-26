@@ -26,6 +26,8 @@ body {
     --accent-three: #fcf36a;
     --accent-dark: #143b43;
 
+	--dark-blue: #34404a;
+
     --w: #eee;
     --g: #666;
     --b6: rgba(20, 59, 67, 0.6);
@@ -42,7 +44,7 @@ body {
 }
 h1, h2, h3 {
 	font-weight: normal;
-	font-family: 'Cinzel', sans-serif;
+	font-family: 'Cinzel', serif;
 }
 h1 {
     font-size: 3rem;
@@ -104,33 +106,48 @@ section {
 section h1 {
     margin-bottom: 12px;
 }
-.logo {
-    left: 3vw;
-    z-index: 1;
-    margin: auto;
-    font-size: 5rem;
-    position: absolute;
-    text-align: center;
-    border-radius: 6px;
-    padding-left: 2rem;
-	font-family: 'Loto';
-    padding-right: 2rem;
-    color: var(--accent-one);
-    background: var(--white);
-    border: 3px solid var(--accent-one);
+.bar {
+	width: 100%;
+	height: 3rem;
+	background-color: var(--accent-one);
 }
+.logo {
+	top: 2vh;
+	left: 3vw;
+	z-index: 1;
+	padding: 3px;
+    border-radius: 1px;
+	position: absolute;
+    color: var(--accent-one);
+	background-color: var(--white);
+	border: 5px solid var(--accent-one);
+}
+.logo-icon {
+    font-size: 5rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+	font-family: 'Loto';
+
+	color: inherit;
+
+    border-width: 3px;
+	border-style: solid;
+	border-color: inherit;
+    border-radius: inherit;
+
+    background-color: inherit;
+	text-shadow: 1px 1px 2px var(--dark);
+}
+
 .phone {
-    top: 3vh;
+    top: 5rem;
     right: 3vw;
     z-index: 1;
-    padding: 6px;
 	color: white;
-    margin: auto;
     font-size: 1rem;
     position: absolute;
-    text-align: center;
-    align-items: center;
-	font-family: 'Loto';
+	font-family: 'Cinzel';
 }
 .phone a {
     text-decoration: none;
@@ -141,11 +158,17 @@ section h1 {
     vertical-align: middle;
 }
 .phone object {
-    height: 2.3rem;
-    border-radius: 6px;
+	height: 30px;
+    border-radius: 1px;
     vertical-align: middle;
-    background-color: currentColor;
     border: 3px solid var(--accent-one);
+}
+.phone-border {
+	padding: 3px;
+	border-radius: 1px;
+	display: inline-block;
+	background-color: white;
+    border: 4px solid var(--accent-one);
 }
 .main {
     height: 80vh;
@@ -155,7 +178,7 @@ section h1 {
     position: relative;
     background-size: cover;
     background-position: right;
-    border-top: 12px solid var(--accent-one);
+    /* border-top: 12px solid var(--accent-one); */
     background-image: url('https://res.cloudinary.com/dbc2wlvk8/image/upload/e_art:fes/v1552326976/heritage-oaks/andrew-seaman-1372319-unsplash.jpg');
 }
 .main span {
