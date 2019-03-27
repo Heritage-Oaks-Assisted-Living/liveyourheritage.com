@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "s": "rm -r dst/* && muleify -sw src dst",
-    "p": "muleify -p src dst",
+    "p": "muleify -p src dev",
+    "s": "rm -r dev/* && muleify -sw src dev",
     "b": "rm -r doc/* && muleify -p src docs"
   },
   "repository": {
