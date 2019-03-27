@@ -195,11 +195,11 @@ article {
 	background-image: url('https://res.cloudinary.com/dbc2wlvk8/image/upload/e_art:fes/v1552326976/heritage-oaks/andrew-seaman-1372319-unsplash.jpg');
 }
 .main-content > div:nth-child(1) {
+	display: inline-block;
 	position: absolute;
     text-align: center;
     left: 50%;
     top: 50%;
-    width: 100%;
     transform: translate(-50%, -50%);
 }
 .main-content > div:nth-child(2) {
@@ -214,6 +214,7 @@ article {
 	padding-left: 3rem;
 	padding-bottom: 3rem;
 
+	background-color: rgba(101, 124, 143, 0.4);
 	background: linear-gradient(195deg, transparent 50%, rgba(101, 124, 143, 0.8) 70%);
 }
 .main-content > div:nth-child(2) > * {
@@ -222,8 +223,8 @@ article {
 
 }
 .main-content > div h1 {
-	color: white;
 	font-size: 5rem;
+	color: white;
 }
 /* .main > div h1, .main > div h2{
     color: white;
