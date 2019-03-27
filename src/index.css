@@ -64,6 +64,7 @@ p, a, li, label {
     color: inherit;
     font-size: 1.1rem;
     line-height: 1.4rem;
+	margin-bottom: 1.1rem;
 }
 header {
     width: 100%;
@@ -156,13 +157,13 @@ article {
     border: 3px solid var(--accent-one);
 }
 .main {
-    height: 80vh;
+    height: 100vh;
 	display: flex;
 
     overflow: hidden;
     position: relative;
     background-size: cover;
-    background-position: right;
+    background-position: center center;
     border-top: 12px solid var(--accent-one);
     background-image: url('https://res.cloudinary.com/dbc2wlvk8/image/upload/e_art:fes/v1552326976/heritage-oaks/andrew-seaman-1372319-unsplash.jpg');
 }
