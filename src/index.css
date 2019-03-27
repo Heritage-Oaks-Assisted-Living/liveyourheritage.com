@@ -115,12 +115,15 @@ article {
     padding: 3vh 3vw;
     max-width: 1200px;
 }
+article h1 {
+	margin: 4vh 0;
+}
 .logo {
 	padding: 3px;
     border-radius: 3px;
 	display: inline-block;
     color: var(--accent-one);
-	background-color: var(--white);
+	/* background-color: var(--white); */
 	border: 1px solid var(--accent-one);
 }
 .logo-icon {
