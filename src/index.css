@@ -119,12 +119,13 @@ article h1 {
 	margin: 4vh 0;
 }
 .logo {
-	padding: 3px;
+	width: 120px;
+	/* padding: 3px;
     border-radius: 3px;
 	display: inline-block;
     color: var(--accent-one);
 	background-color: white;
-	border: 1px solid var(--accent-one);
+	border: 1px solid var(--accent-one); */
 }
 .logo-icon {
     font-size: 5rem;
@@ -251,4 +252,14 @@ article h1 {
 }
 .button:hover {
 	cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.6rem;
+	}
 }
