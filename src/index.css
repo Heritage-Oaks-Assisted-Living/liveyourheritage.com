@@ -11,13 +11,8 @@ body {
     --dark: #333;
     --light: #eee;
     --white: #f7f7f7;
-    --yellow: #fff565;
-    --accent-one: #657c8f;
-    --accent-two: #82adae;
-    --accent-three: #fcf36a;
-    --accent-dark: #143b43;
-
-	--dark-blue: #34404a;
+    --light-blue: #788490;
+	--dark-blue: #43515E;
 
     --w: #eee;
     --g: #666;
@@ -39,7 +34,7 @@ h1, h2, h3 {
 }
 h1 {
     font-size: 3rem;
-    color: var(--accent-one);
+    color: var(--dark-blue);
 }
 h2 {
     font-size: 2.5rem;
@@ -119,13 +114,13 @@ article h1 {
 	margin: 4vh 0;
 }
 .logo {
-	width: 120px;
+	width: 6rem;
 	/* padding: 3px;
     border-radius: 3px;
 	display: inline-block;
-    color: var(--accent-one);
+    color: var(--light-blue);
 	background-color: white;
-	border: 1px solid var(--accent-one); */
+	border: 1px solid var(--light-blue); */
 }
 .logo-icon {
     font-size: 5rem;
@@ -149,8 +144,8 @@ article h1 {
 }
 .phone {
 	text-align: right;
-	width: 20%;
-	color: var(--accent-one);
+	/* width: 20%; */
+	color: var(--dark-blue);
     font-size: 1rem;
 	display: inline-block;
 	font-family: 'Cinzel';
@@ -168,21 +163,21 @@ article h1 {
 	/* height: 30px; */
     border-radius: 1px;
     vertical-align: middle;
-    /* border: 3px solid var(--accent-one); */
+    /* border: 3px solid var(--light-blue); */
 }
 .phone-border {
 	padding: 3px;
 	display: inline-block;
 	/* border-radius: 1px;
 	background-color: white;
-    border: 3px solid var(--accent-one); */
+    border: 3px solid var(--light-blue); */
 }
 .main {
 	color: white;
 	height: 85vh;
 	padding: 0 3vw 3vh 3vw;
 	background: white;
-    /* border-top:  solid var(--accent-one); */
+    /* border-top:  solid var(--light-blue); */
 }
 .main span {
     font-weight: bold;
@@ -223,25 +218,23 @@ article h1 {
 	padding-left: 3rem;
 	padding-bottom: 3rem;
 
-	background-color: rgba(101, 124, 143, 0.4);
-	background: linear-gradient(195deg, transparent 50%, rgba(101, 124, 143, 0.8) 70%);
+	/* background-color: rgba(101, 124, 143, 0.4); */
+	background: linear-gradient(195deg, transparent 50%, rgba(120, 132, 144, 0.8) 70%);
 }
 .main-content > div:nth-child(2) > * {
 	padding: 12px;
 	border-left: 3px solid white;
-
 }
-.main-content > div h1 {
-	font-size: 5rem;
+.main-content h1 {
+	font-size: 6rem;
 	color: white;
 }
-/* .main > div h1, .main > div h2{
-    color: white;
-    text-shadow: 1px 1px 3px var(--dark);
-} */
+.main-content h2 {
+	font-size: 2rem;
+}
 .button {
 	display: block;
-	background-color: var(--accent-one);
+	background-color: var(--light-blue);
 	margin-top: 1rem;
 	padding: 1rem;
 	width: initial;
@@ -255,11 +248,11 @@ article h1 {
 }
 
 
-@media screen and (max-width: 600px) {
-	h1 {
-		font-size: 2rem;
+@media screen and (max-width: 700px) {
+	.main-content h1 {
+		font-size: 15vw;
 	}
-	h2 {
+	.main-content h2 {
 		font-size: 1.6rem;
 	}
 }
