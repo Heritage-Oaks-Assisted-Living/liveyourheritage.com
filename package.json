@@ -1,27 +1,28 @@
 {
-  "name": "heritageoaks.com",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "p": "muleify -p src dev",
-    "s": "rm -r dev/* && muleify -sw src dev",
-    "b": "rm -r docs/* && muleify -p src docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arcdevio/heritageoaks.com.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/arcdevio/heritageoaks.com/issues"
-  },
-  "homepage": "https://github.com/arcdevio/heritageoaks.com#readme",
-  "dependencies": {
-    "flexboxgrid": "^6.3.1"
-  }
+    "private": true,
+    "name": "heritageoaks.com",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "p": "muleify -p src dev",
+        "s": "rm -r dev/* && muleify -pw src dev -s dev",
+        "b": "rm -r docs/* && muleify -p src docs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arcdevio/heritageoaks.com.git"
+    },
+    "author": "",
+    "license": "SEE LICENSE IN LICENSE",
+    "bugs": {
+        "url": "https://github.com/arcdevio/heritageoaks.com/issues"
+    },
+    "homepage": "https://github.com/arcdevio/heritageoaks.com#readme",
+    "dependencies": {
+        "flexboxgrid": "^6.3.1"
+    }
 }
