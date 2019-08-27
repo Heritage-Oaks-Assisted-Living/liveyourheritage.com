@@ -6,6 +6,9 @@
 	font-family: inherit;
 	box-sizing: border-box;
 }
+html, body {
+	max-width: 100%;
+}
 body {
 
     --dark: #333;
@@ -20,7 +23,7 @@ body {
     --b9: rgba(20, 59, 67, 0.9);
 
 	font-size: 16px;
-	font-family: 'Lato';
+	font-family: 'Lato', sans-serif;
 
 	display: flex;
 	min-height: 100vh;
@@ -139,37 +142,77 @@ article h1 {
     background-color: inherit;
 	/* text-shadow: 1px 1px 2px var(--dark); */
 }
+/* menu */
 .menu {
-	position: absolute;
 	display: flex;
+	position: relative;
 	flex-direction: row;
-	top: 20px;
-	right: -190px;
-	z-index: 1;
-	height: 100%;
 }
 .menu.active {
 	right: 0;
 }
-.menu .icon {
-	margin-right: 40px;
-	display: flex;
-	flex-direction: column;
+.menu.active .drawer {
+	transform: translate(0, 0);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
-.menu .icon:hover {
+.menu-icon-open {
+	width: 3em;
+	height: 3em;
 	cursor: pointer;
+	position: relative;
 }
-.menu .icon > div {
-	height: 3px;
-	background-color: black;
-	width: 50px;
-	margin: 0.6rem;
+.menu-icon-open:before {
+	left: 0;
+	top: 20%;
+	width: 100%;
+	content: '';
+	position: absolute;
+	border-top: 0.3em solid var(--dark-blue);
+}
+.menu-icon-open:after {
+	left: 0;
+	width: 100%;
+	bottom: 20%;
+	content: '';
+	position: absolute;
+	border-bottom: 0.3em solid var(--dark-blue);
+}
+
+.menu-icon-close {
+	width: 3em;
+	height: 3em;
+	margin: 2rem;
+	cursor: pointer;
+	position: relative;
+}
+.menu-icon-close:before {
+	left: 0;
+	width: 100%;
+	content: '';
+	position: absolute;
+	top: calc(50% - 0.15em);
+	transform: rotate(45deg);
+	border-top: 0.3em solid var(--dark-blue);
+}
+.menu-icon-close:after {
+	left: 0;
+	width: 100%;
+	content: '';
+	position: absolute;
+	bottom: calc(50% - 0.15em);
+	transform: rotate(-45deg);
+	border-bottom: 0.3em solid var(--dark-blue);
 }
 .menu .drawer {
+	top: 0;
+	right: 0;
+	z-index: 1;
+	height: 100%;
+	position: fixed;
 	padding-right: 3rem;
 	flex-direction: column;
 	background-color: white;
-	box-shadow: 2px 6px 6px 2px #222;
+	transform: translate(100%, 0);
 }
 .menu .drawer > a {
 	display: block;
@@ -179,13 +222,13 @@ article h1 {
 .menu .drawer > a:hover {
 	background-color: lightgrey;
 }
+/* menu */
 .phone {
-	text-align: right;
-	/* width: 20%; */
-	color: var(--dark-blue);
     font-size: 1rem;
+	text-align: right;
 	display: inline-block;
 	font-family: 'Cinzel';
+	color: var(--dark-blue);
 }
 .phone a {
     text-decoration: none;
