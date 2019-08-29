@@ -3,7 +3,7 @@
 <head>
 
     <base href="/">
-    <script>document.querySelector('base').href = window.location.pathname.slice(-1) === '/' ? window.location.pathname : window.location.pathname + '/';</script>
+    <script>location.hostname.indexOf('github.io')===-1?null:document.querySelector('base').href='/'+location.pathname.split('/')[1]+'/';</script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
