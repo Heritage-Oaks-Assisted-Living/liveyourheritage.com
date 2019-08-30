@@ -55,10 +55,12 @@ h3 {
 p, a, li, label {
     color: inherit;
     font-size: 1.1rem;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
 	margin-bottom: 1.1rem;
 }
 header {
+	flex-wrap: wrap;
+
 	background-color: white;
 	width: 100%;
 	display: flex;
@@ -73,35 +75,6 @@ footer {
 img {
     width: 100%;
 }
-/* form {
-    width: 100%;
-	padding: 1rem;
-	border-radius: 6px;
-	background-color: #ffffff;
-	border-left: 6px solid #d9ded9;
-}
-input, textarea {
-    width: 100%;
-    padding: 6px;
-    border: none;
-    background: none;
-    border-bottom: 1px solid #d9ded9;
-}
-form > div {
-    text-align: left;
-    margin: 1rem auto;
-}
-form label {
-    display: block;
-    color: var(--g);
-    text-align: left;
-    margin-left: 3px;
-	margin-top: 1rem;
-    text-transform: capitalize;
-}
-form h1 {
-	margin: 0;
-} */
 section {
 	display: flex;
 	min-height: 100vh;
@@ -125,7 +98,7 @@ hr {
 	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 .logo {
-	width: 6rem;
+	width: 9rem;
 	/* padding: 3px;
     border-radius: 3px;
 	display: inline-block;
@@ -164,8 +137,8 @@ hr {
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 .menu-icon-open {
-	width: 3em;
-	height: 3em;
+	width: 3rem;
+	height: 2rem;
 	cursor: pointer;
 	position: relative;
 }
@@ -175,7 +148,7 @@ hr {
 	width: 100%;
 	content: '';
 	position: absolute;
-	border-top: 0.3em solid var(--dark-blue);
+	border-top: 0.2rem solid var(--dark-blue);
 }
 .menu-icon-open:after {
 	left: 0;
@@ -183,12 +156,12 @@ hr {
 	bottom: 20%;
 	content: '';
 	position: absolute;
-	border-bottom: 0.3em solid var(--dark-blue);
+	border-bottom: 0.2rem solid var(--dark-blue);
 }
 
 .menu-icon-close {
-	width: 3em;
-	height: 3em;
+	width: 3rem;
+	height: 2rem;
 	margin: 2rem;
 	cursor: pointer;
 	position: relative;
@@ -200,7 +173,7 @@ hr {
 	position: absolute;
 	top: calc(50% - 0.15em);
 	transform: rotate(45deg);
-	border-top: 0.3em solid var(--dark-blue);
+	border-top: 0.2rem solid var(--dark-blue);
 }
 .menu-icon-close:after {
 	left: 0;
@@ -209,7 +182,7 @@ hr {
 	position: absolute;
 	bottom: calc(50% - 0.15em);
 	transform: rotate(-45deg);
-	border-bottom: 0.3em solid var(--dark-blue);
+	border-bottom: 0.2rem solid var(--dark-blue);
 }
 .menu .drawer {
 	top: 0;
@@ -226,6 +199,7 @@ hr {
 	display: block;
 	padding: 1rem;
 	padding-right: 3rem;
+	text-decoration: none;
 }
 .menu .drawer > a:hover {
 	background-color: lightgrey;
@@ -400,7 +374,8 @@ hr {
 	margin: 0;
 }
 input, textarea {
-    width: 100%;
+	width: 100%;
+    max-width: 100%;
     padding: 6px;
     border: none;
     background: none;
@@ -425,11 +400,27 @@ label {
 	height: 300px;
 	background-color: var(--light-green);
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 	.main-content h1 {
 		font-size: 15vw;
 	}
 	.main-content h2 {
 		font-size: 1.6rem;
+	}
+	main h1 {
+		font-size: 2.6rem;
+	}
+	main h3 {
+		font-size: 1.3rem;
+	}
+	header {
+		flex-wrap: wrap;
+	}
+	.logo {
+	    order: -1;
+		flex: 1 0 100%;
+	    padding-left: 4rem;
+	    padding-right: 4rem;
+		flex-direction: row;
 	}
 }
