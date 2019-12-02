@@ -9,7 +9,7 @@
     },
     "scripts": {
         "p": "muleify -p src dev",
-        "s": "rm -r dev/* && muleify -sw src dev",
+        "s": "rm -r dev/* && muleify -pw src dev -s dev",
         "b": "rm -r docs/* && muleify -p src docs"
     },
     "repository": {
