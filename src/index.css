@@ -341,13 +341,13 @@ hr {
 	cursor: pointer;
 }
 .button.flat {
-	background: none;
+	background-color: rgba(120, 132, 144, 0.1);
 	color: var(--light-blue);
 	width: inherit;
+	border: 1px solid white;
 }
 .button.flat:hover {
-	background-color: rgba(120, 132, 144, 0.1);
-
+	border: 1px solid var(--dark-blue);
 }
 .post {
     display: flex;
@@ -386,6 +386,9 @@ hr {
 .post:hover a {
     color: rgba(255, 255, 255, 0);
     background: rgba(0, 0, 0, 0);
+}
+.thumbnail {
+	border: 5px solid var(--dark-blue);
 }
 #contact article > div {
     width: 100%;
