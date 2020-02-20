@@ -1,0 +1,45 @@
+<!-- {
+    "title": "Gallery | Heritage Oaks Assisted Living"
+} -->
+<script src="./assets/gallery.min.js" defer></script>
+<script src="./gallery/gallery.js" defer></script>
+
+<style>
+    .bg-image {
+        background-color: var(--light-blue);
+    }
+    .photo-gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .photo-gallery > img {
+        flex-grow: 1;
+        display: flex;
+        flex-basis: 0;
+        max-width: 50%;
+        max-height: 300px;
+        position: relative;
+        flex-direction: column;
+    }
+</style>
+
+<div class="top">
+    <div>
+        <h1>Gallery: The Home</h1>
+        <h2>Life at heritage oaks</h2>
+    </div>
+</div>
+
+<section>
+    <article>
+        <div class="row">
+            <div class="col-xs">
+                <h2>The Home</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="photo-gallery"></div>
+    </article>
+</section>

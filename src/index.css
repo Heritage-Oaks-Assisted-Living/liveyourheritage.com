@@ -83,6 +83,12 @@ header {
 	justify-content: space-between;
 	padding: 1vh 3vw;
 }
+
+.footer {
+	width: 100%;
+	background: white;
+	padding: 3vh 6vw;
+}
 footer {
 	background-color: #eceaea;
 }
@@ -458,6 +464,59 @@ label {
 }
 .pillars > div:nth-child(3) h4::before {
 	background-image: url('./assets/sunny.svg')
+}
+
+.tiles {
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+}
+.tiles > * {
+    /* padding: 9vw 4vw; */
+    flex: 1 1 50%;
+    display: flex;
+	/* border-radius: 2px; */
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.tiles object {
+    height: 4rem;
+    text-align: center;
+}
+.tiles h3, .tiles h2, .tiles h1 {
+    color: white;
+    margin-bottom: 1.3rem;
+}
+.tiles p {
+    /* color: white; */
+    text-align: left;
+	margin: 1rem;
+}
+.tiles > div {
+    min-height: 500px;
+}
+
+.main-filter {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(120, 132, 144, 0.6);
+}
+.main-filter h1 {
+    font-weight: 600;
+}
+.main-filter h2 {
+    font-weight: 300;
+}
+.main-filter h1, .main-filter h2, .main-filter h4 {
+    color: var(--white);
+    text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 600px) {
 	.hide-lg {

@@ -23,6 +23,8 @@
     },
     "homepage": "https://github.com/arcdevio/heritageoaks.com#readme",
     "dependencies": {
+        "astatine": "^1.2.0",
+        "erbium": "^2.0.1",
         "flexboxgrid": "^6.3.1"
     }
 }
