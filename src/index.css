@@ -119,12 +119,17 @@ hr {
 }
 .logo {
 	width: 10rem;
+	max-height: 150px;
+	display: flex;
 	/* padding: 3px;
     border-radius: 3px;
 	display: inline-block;
     color: var(--light-blue);
 	background-color: white;
 	border: 1px solid var(--light-blue); */
+}
+.logo object {
+	width: 100%;
 }
 .logo-icon {
     font-size: 5rem;
@@ -274,39 +279,34 @@ hr {
 .main {
 	color: white;
 	height: 85vh;
-	padding: 0 3vw 3vh 3vw;
 	background: white;
-    /* border-top:  solid var(--light-blue); */
-}
-.main span {
-    font-weight: bold;
-	color: white;
-	font-size: 1.2rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.main-content {
-	height: 100%;
-	width: 100%;
-
-	display: flex;
-	flex-direction: column;
+	position: relative;
 	overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center center;
-	background-image: url('https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto/v1572639348/heritage-oaks/_MG_3025.jpg');
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 }
-.main-content > div:nth-child(1) {
-	display: inline-block;
+.main .slide {
+	opacity: 0;
+	width: initial;
+	align-self: center;
+	justify-self: center;
+	flex-direction: column;
+	transition: opacity 2s;
 	position: absolute;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	max-width: 1920px;
 }
-.main-content > div:nth-child(2) {
+.main .slide.active {
+	opacity: 1;
+}
+.main > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
 	width: 100%;
+	max-width: 1920px;
 	height: 100%;
 
 	display: flex;
@@ -317,20 +317,16 @@ hr {
 	padding-left: 3rem;
 	padding-bottom: 3rem;
 
-	/* background-color: rgba(101, 124, 143, 0.4); */
 	background: linear-gradient(195deg, transparent 50%, rgba(120, 132, 144, 0.8) 70%);
 }
-.main-content > div:nth-child(2) > * {
-	padding: 12px;
-	border-left: 3px solid white;
-}
-.main-content h1 {
+.main > div h1 {
 	font-size: 6rem;
 	color: white;
 }
-.main-content h2 {
+.main > div h2 {
 	font-size: 2rem;
 }
+
 .button {
 	/* display: block; */
 	background-color: var(--light-blue);
@@ -522,10 +518,10 @@ label {
 	.hide-lg {
 		display: initial;
 	}
-	.main-content h1 {
+	.main > div h1 {
 		font-size: 15vw;
 	}
-	.main-content h2 {
+	.main > div h2 {
 		font-size: 1.6rem;
 	}
 	main h1 {
@@ -557,8 +553,8 @@ label {
 	.logo {
 	    order: -1;
 		flex: 1 0 100%;
-	    padding-left: 4rem;
-	    padding-right: 4rem;
+	    padding: 1rem;
 		flex-direction: row;
+		text-align: center;
 	}
 }
