@@ -396,6 +396,10 @@ hr {
 .thumbnail {
 	border: 5px solid var(--dark-blue);
 }
+.form-response {
+	font-size: 2rem;
+	font-weight: bold;
+}
 #contact article > div {
     width: 100%;
 	padding: 1rem;
