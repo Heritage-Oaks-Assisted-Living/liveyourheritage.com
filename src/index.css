@@ -5,6 +5,8 @@
     color: inherit;
 	font-family: inherit;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
+	
 }
 html, body {
 	max-width: 100%;
@@ -158,6 +160,11 @@ hr {
 	position: relative;
 	flex-direction: row;
 }
+.menu .icon {
+	margin: 0 0.5rem;
+	text-align: center;
+	font-size: 12px;
+}
 .menu.active {
 	right: 0;
 }
@@ -167,7 +174,7 @@ hr {
 }
 .menu-icon-open {
 	width: 3rem;
-	height: 2rem;
+	height: 27px;
 	cursor: pointer;
 	position: relative;
 }
@@ -442,7 +449,9 @@ label {
 .hide-lg {
 	display: none;
 }
-
+.hide-sm {
+	display: initial;
+}
 .pillars > div {
 	border-left: 1px solid black;
 	padding-left: 12px;
@@ -525,6 +534,9 @@ label {
 @media screen and (max-width: 600px) {
 	.hide-lg {
 		display: initial;
+	}
+	.hide-sm {
+		display: none;
 	}
 	.main > div {
 		padding-left: 1rem;
