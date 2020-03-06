@@ -40,7 +40,7 @@ if (main) {
 		action: 'https://www.enformed.io/b3bia8ve',
 		prepare: function (data, resolve) {
             console.log(data);
-			data['*default_email'] = 'ryan.reilly@livingyourheritage.com';
+			data['*default_email'] = 'ryan.reilly@liveyourheritage.com';
 			// data['*cc'] = '';
 			resolve(data);
 		},

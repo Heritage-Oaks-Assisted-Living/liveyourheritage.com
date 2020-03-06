@@ -5,6 +5,8 @@
     color: inherit;
 	font-family: inherit;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
+
 }
 html, body {
 	max-width: 100%;
@@ -73,6 +75,7 @@ li {
 	list-style: none;
 }
 header {
+	position: fixed;
 	flex-wrap: wrap;
 
 	background-color: white;
@@ -82,6 +85,15 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 1vh 3vw;
+	z-index: 1;
+}
+main {
+	margin-top: 116px;
+}
+.footer {
+	width: 100%;
+	background: white;
+	padding: 3vh 6vw;
 }
 footer {
 	background-color: #eceaea;
@@ -113,12 +125,17 @@ hr {
 }
 .logo {
 	width: 10rem;
+	max-height: 150px;
+	display: flex;
 	/* padding: 3px;
     border-radius: 3px;
 	display: inline-block;
     color: var(--light-blue);
 	background-color: white;
 	border: 1px solid var(--light-blue); */
+}
+.logo object {
+	width: 100%;
 }
 .logo-icon {
     font-size: 5rem;
@@ -143,6 +160,20 @@ hr {
 	position: relative;
 	flex-direction: row;
 }
+.menu .icon {
+	margin: 0 0.5rem;
+	text-align: center;
+	font-size: 12px;
+}
+.menu .icon a {
+	font-size: 12px;
+	line-height: initial;
+	margin-bottom: initial;
+	text-decoration: none;
+}
+.menu .icon object {
+	pointer-events: none;
+}
 .menu.active {
 	right: 0;
 }
@@ -152,7 +183,7 @@ hr {
 }
 .menu-icon-open {
 	width: 3rem;
-	height: 2rem;
+	height: 27px;
 	cursor: pointer;
 	position: relative;
 }
@@ -218,6 +249,7 @@ hr {
 .menu .drawer > a:hover {
 	background-color: lightgrey;
 }
+
 /* menu */
 .phone {
     font-size: 1rem;
@@ -268,39 +300,34 @@ hr {
 .main {
 	color: white;
 	height: 85vh;
-	padding: 0 3vw 3vh 3vw;
 	background: white;
-    /* border-top:  solid var(--light-blue); */
-}
-.main span {
-    font-weight: bold;
-	color: white;
-	font-size: 1.2rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.main-content {
-	height: 100%;
-	width: 100%;
-
-	display: flex;
-	flex-direction: column;
+	position: relative;
 	overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center center;
-	background-image: url('https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto/v1572639348/heritage-oaks/_MG_3025.jpg');
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 }
-.main-content > div:nth-child(1) {
-	display: inline-block;
+.main .slide {
+	opacity: 0;
+	width: initial;
+	align-self: center;
+	justify-self: center;
+	flex-direction: column;
+	transition: opacity 2s;
 	position: absolute;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	max-width: 1920px;
 }
-.main-content > div:nth-child(2) {
+.main .slide.active {
+	opacity: 1;
+}
+.main > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
 	width: 100%;
+	max-width: 1920px;
 	height: 100%;
 
 	display: flex;
@@ -311,20 +338,16 @@ hr {
 	padding-left: 3rem;
 	padding-bottom: 3rem;
 
-	/* background-color: rgba(101, 124, 143, 0.4); */
 	background: linear-gradient(195deg, transparent 50%, rgba(120, 132, 144, 0.8) 70%);
 }
-.main-content > div:nth-child(2) > * {
-	padding: 12px;
-	border-left: 3px solid white;
-}
-.main-content h1 {
+.main > div h1 {
 	font-size: 6rem;
 	color: white;
 }
-.main-content h2 {
+.main > div h2 {
 	font-size: 2rem;
 }
+
 .button {
 	/* display: block; */
 	background-color: var(--light-blue);
@@ -390,6 +413,10 @@ hr {
 .thumbnail {
 	border: 5px solid var(--dark-blue);
 }
+.form-response {
+	font-size: 2rem;
+	font-weight: bold;
+}
 #contact article > div {
     width: 100%;
 	padding: 1rem;
@@ -432,7 +459,9 @@ label {
 .hide-lg {
 	display: none;
 }
-
+.hide-sm {
+	display: initial;
+}
 .pillars > div {
 	border-left: 1px solid black;
 	padding-left: 12px;
@@ -459,15 +488,77 @@ label {
 .pillars > div:nth-child(3) h4::before {
 	background-image: url('./assets/sunny.svg')
 }
+
+.tiles {
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+}
+.tiles > * {
+    /* padding: 9vw 4vw; */
+    flex: 1 1 50%;
+    display: flex;
+	/* border-radius: 2px; */
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.tiles object {
+    height: 4rem;
+    text-align: center;
+}
+.tiles h3, .tiles h2, .tiles h1 {
+    color: white;
+    margin-bottom: 1.3rem;
+}
+.tiles p {
+    /* color: white; */
+    text-align: left;
+	margin: 1rem;
+}
+.tiles > div {
+    min-height: 500px;
+}
+
+.main-filter {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(120, 132, 144, 0.6);
+}
+.main-filter h1 {
+    font-weight: 600;
+}
+.main-filter h2 {
+    font-weight: 300;
+}
+.main-filter h1, .main-filter h2, .main-filter h4 {
+    color: var(--white);
+    text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.8);
+}
 @media screen and (max-width: 600px) {
 	.hide-lg {
 		display: initial;
 	}
-	.main-content h1 {
+	.hide-sm {
+		display: none;
+	}
+	.main > div {
+		padding-left: 1rem;
+	}
+	.main > div h1 {
 		font-size: 15vw;
 	}
-	.main-content h2 {
+	.main > div h2 {
 		font-size: 1.6rem;
+	}
+	main {
+		margin-top: 190px;
 	}
 	main h1 {
 		font-size: 2.6rem;
@@ -498,8 +589,8 @@ label {
 	.logo {
 	    order: -1;
 		flex: 1 0 100%;
-	    padding-left: 4rem;
-	    padding-right: 4rem;
+	    padding: 1rem;
 		flex-direction: row;
+		text-align: center;
 	}
 }

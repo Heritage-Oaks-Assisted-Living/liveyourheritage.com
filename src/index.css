@@ -6,7 +6,7 @@
 	font-family: inherit;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	
+
 }
 html, body {
 	max-width: 100%;
@@ -165,6 +165,15 @@ hr {
 	text-align: center;
 	font-size: 12px;
 }
+.menu .icon a {
+	font-size: 12px;
+	line-height: initial;
+	margin-bottom: initial;
+	text-decoration: none;
+}
+.menu .icon object {
+	pointer-events: none;
+}
 .menu.active {
 	right: 0;
 }
@@ -240,6 +249,7 @@ hr {
 .menu .drawer > a:hover {
 	background-color: lightgrey;
 }
+
 /* menu */
 .phone {
     font-size: 1rem;
