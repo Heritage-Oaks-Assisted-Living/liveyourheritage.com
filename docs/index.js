@@ -41,7 +41,7 @@ if (main) {
 		prepare: function (data, resolve) {
             console.log(data);
 			data['*default_email'] = 'ryan.reilly@liveyourheritage.com';
-			// data['*cc'] = '';
+			data['*cc'] = 'grant.reilly@liveyourheritage.com';
 			resolve(data);
 		},
 		complete: function (error, success) {
