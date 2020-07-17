@@ -39,9 +39,8 @@ if (main) {
 		responseType: 'json',
 		action: 'https://www.enformed.io/b3bia8ve',
 		prepare: function (data, resolve) {
-            console.log(data);
-			data['*default_email'] = 'ryan.reilly@liveyourheritage.com';
-			data['*cc'] = 'grant.reilly@liveyourheritage.com';
+            data['*default_email'] = 'ryan.reilly@liveyourheritage.com';
+			data['*cc'] = 'grant.reilly@liveyourheritage.com, jon@arcdev.io';
 			resolve(data);
 		},
 		complete: function (error, success) {
