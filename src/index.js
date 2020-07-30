@@ -40,7 +40,7 @@ if (main) {
 		action: 'https://www.enformed.io/b3bia8ve',
 		prepare: function (data, resolve) {
             data['*default_email'] = 'ryan.reilly@liveyourheritage.com';
-			data['*cc'] = 'grant.reilly@liveyourheritage.com, jon@arcdev.io';
+			data['*cc'] = 'grant.reilly@liveyourheritage.com, jon@arcdev.io, ryanreilly1995@gmail.com, grantreilly123@gmail.com';
 			resolve(data);
 		},
 		complete: function (error, success) {
