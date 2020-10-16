@@ -54,8 +54,7 @@ if (main) {
 				gtag('event', 'Submitted', {
 					'event_category': 'Forms',
 					'event_label': 'General Contact Us Form'					
-				  });
-				  
+				});				  
 			}
 		}
 	});	
@@ -68,8 +67,5 @@ if (main) {
 			'event_label': 'Call Us Button'			
 		  });
 		}, false);
-	}
-
-
-	  
+	}	  
 }());
