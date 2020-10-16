@@ -51,8 +51,21 @@ if (main) {
 				form.style.display = 'none';
 				response.style.color = '#B0BF7F';
 				response.innerText = 'Contact Form Submitted!';
+				gtag('event', 'Submitted', {
+					'event_category': 'Forms',
+					'event_label': 'General Contact Us Form'					
+				});
 			}
 		}
-	});
+	});	
 
+	var clicktocall = document.querySelectorAll("a[href='tel:520-999-0797']");
+	for (var i=0; i < clicktocall.length; i++) {
+	 clicktocall[i].addEventListener("click", function() {
+		gtag('event', 'Clicked', {
+			'event_category': 'Buttons',
+			'event_label': 'Call Us Button'			
+		  });
+		}, false);
+	}	  
 }());
