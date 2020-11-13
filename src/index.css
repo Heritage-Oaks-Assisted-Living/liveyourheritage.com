@@ -136,6 +136,7 @@ hr {
 }
 .logo object {
 	width: 100%;
+	pointer-events: none;
 }
 .logo-icon {
     font-size: 5rem;
