@@ -250,7 +250,10 @@ hr {
 .menu .drawer > a:hover {
 	background-color: lightgrey;
 }
-
+.menu__inner a {
+	text-decoration: none;
+	padding: 0px 10px;
+}
 /* menu */
 .phone {
     font-size: 1rem;
