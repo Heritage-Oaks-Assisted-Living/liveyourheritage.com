@@ -250,6 +250,12 @@ hr {
 .menu .drawer > a:hover {
 	background-color: lightgrey;
 }
+.mobile-menu {
+	display: none;
+}
+.menu__inner {
+	padding: 10px 20px;
+}
 .menu__inner a {
 	text-decoration: none;
 	padding: 0px 10px;
@@ -544,6 +550,14 @@ label {
 .main-filter h1, .main-filter h2, .main-filter h4 {
     color: var(--white);
     text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 768px) {
+	.menu__inner {
+		display: none;
+	}
+	.mobile-menu {
+		display: block;
+	}
 }
 @media screen and (max-width: 600px) {
 	.hide-lg {
