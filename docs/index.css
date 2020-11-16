@@ -255,7 +255,7 @@ hr {
 }
 .video-outer {
 	width: 600px;
-	margin: 0 auto;
+	margin: 0 auto 45px auto;
 	max-width: 100%;
 }
 .video-wrap {
