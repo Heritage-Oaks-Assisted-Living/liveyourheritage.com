@@ -253,8 +253,7 @@ hr {
 .mobile-menu {
 	display: none;
 }
-.video-outer {
-	width: 600px;
+.video-outer {	
 	margin: 0 auto 45px auto;
 	max-width: 100%;
 }
