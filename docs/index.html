@@ -49,11 +49,21 @@
                 <span>520-999-0797</span>
             </a>
         </div>
-        <div class="logo">
-            <object data="./assets/heritage-oaks-logo.svg" type="image/svg+xml">Heritage Oaks Logo</object>
-        </div>
+        <a href="./">
+            <div class="logo">
+                <object data="./assets/heritage-oaks-logo.svg" type="image/svg+xml">Heritage Oaks Logo</object>
+            </div>
+        </a>
 
         <div class="menu row">
+            <div class="menu__inner">
+                <a href="./">Home</a>
+                <a href="./about">About Us</a>
+                <a href="./gallery">Gallery</a>
+                <a href="./#contact">Contact Us</a>            
+            </div>
+
+
             <div class="col-xs icon hide-sm">
                 <a href="tel:520-999-0797">
                     <object data="./assets/phone.svg" type="image/svg+xml">Phone Icon</object>
@@ -70,7 +80,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs icon">
+            <div class="col-xs icon mobile-menu">
                 <div class="menu-icon-open"></div>
                 <div>
                     Menu
@@ -145,7 +155,16 @@
 </section>
 <section>
     <article>
-        <div class="row center-xs">
+        
+        <div class="center-xs">
+            <h1>Take our Tour</h1>
+            <div class="video-outer">
+                <div class="video-wrap">
+                    <iframe src="https://www.dropbox.com/s/r51zpxqzcwloued/Heriitage_Oaks_Full_Version.mp4?raw=1"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row center-xs h">
             <h1>Check out our gallery</h1>
         </div>
         <div class="row">
@@ -191,11 +210,11 @@
                     <div class="row">
                         <div class="col-xs-6">
                             <label for="name">name</label>
-                            <input type="text" name="name" value="">
+                            <input type="text" name="name" value="" required>
                         </div>
                         <div class="col-xs-6">
                             <label for="email">email</label>
-                            <input type="text" name="email" value="">
+                            <input type="text" name="email" value="" required>
                         </div>
 
                         <div class="col-xs">
@@ -205,6 +224,7 @@
                         <div class="col-xs-12">
                             <label for="comment">message</label>
                             <textarea type="text" name="comment" value=""></textarea>
+                            <input type="hidden" name="*honeypot" />          
                         </div>
                         <div class="col-xs">
                             <input type="submit" class="button" value="Submit">
@@ -239,6 +259,6 @@
             </div>
         </article>
     </footer>
-
+    <script type="text/javascript" src="//cdn.callrail.com/companies/973451116/83660bd2353163132d39/12/swap.js"></script> 
 </body>
 </html>
