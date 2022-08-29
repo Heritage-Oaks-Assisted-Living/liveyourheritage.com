@@ -25,39 +25,45 @@ if (main) {
 
 
 (function() {
-
 	var response = document.querySelector('.form-response');
 	var form = document.querySelector('.contact-form');
 	if (!form) return;
 
-	At.setup.spinner.size = '6px';
-	At.setup.spinner.thickness = '30px';
+	form.addEventListener('submit', function (e) {
+		e.preventDefault();
 
-	At.submit({
-		query: form,
-		method: 'post',
-		responseType: 'json',
-		action: 'https://www.enformed.io/b3bia8ve',
-		prepare: function (data, resolve) {
-            data['*default_email'] = 'ryan.reilly@liveyourheritage.com';
-			data['*cc'] = 'grant.reilly@liveyourheritage.com, ryanreilly1995@gmail.com, grantreilly123@gmail.com';
-			resolve(data);
-		},
-		complete: function (error, success) {
-			if (error) {
-				response.style.color = '#89293D';
-				response.innerText = 'Error: Form submit failed. Please call.';
-			} else {
-				form.style.display = 'none';
-				response.style.color = '#B0BF7F';
-				response.innerText = 'Contact Form Submitted!';
-				gtag('event', 'Submitted', {
-					'event_category': 'Forms',
-					'event_label': 'General Contact Us Form'					
-				});
-			}
+		var data = {};
+		var elements = [];
+
+		elements.push.apply(elements, form.querySelectorAll('input'));
+		elements.push.apply(elements, form.querySelectorAll('textarea'));
+
+		for (var i = 0; i < elements.length; i++) {
+			var input = elements[i];
+			var name = input.name;
+			var value = input.value;
+			if (name) data[name] = value;
 		}
-	});	
+
+		data['*default_email'] = 'ryan.reilly@liveyourheritage.com';
+		data['*cc'] = 'grant.reilly@liveyourheritage.com, ryanreilly1995@gmail.com, grantreilly123@gmail.com';
+
+		fetch('/email', {
+			method: 'post',
+			body: JSON.stringify(data)
+		}).then(function (result) {
+			if (result.status !== 200) throw new Error(result.statusText);
+			form.reset();
+		}).then(function (data) {
+			form.style.display = 'none';
+			response.style.color = '#B0BF7F';
+			response.innerText = 'Success: Form Sent';
+		}).catch(function (error) {
+			console.log(error);
+			response.style.color = '#89293D';
+			response.innerText = 'Error: Please Call';
+		});
+	});
 
 	var clicktocall = document.querySelectorAll("a[href='tel:520-999-0797']");
 	for (var i=0; i < clicktocall.length; i++) {
