@@ -45,8 +45,8 @@ if (main) {
 			if (name) data[name] = value;
 		}
 		data['$name'] = 'Main Contact Form';
-		data['$to'] = 'ryan.reilly@liveyourheritage.com';
-		data['$cc'] = 'grant.reilly@liveyourheritage.com, ryanreilly1995@gmail.com, grantreilly123@gmail.com';
+		data['$to'] = 'info@liveyourheritage.com';
+		data['$cc'] = 'ryan.reilly@liveyourheritage.com, reid.reilly@liveyourheritage.com';
 
 		fetch('/email', {
 			method: 'post',
