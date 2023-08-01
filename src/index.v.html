@@ -103,7 +103,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm">
-                <form class="contact-form">
+                <form class="contact-form" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfEJDftoQDPV6Wbx-AjcH3KC_c6Q6-lStykEZUlsbCbf7AIzA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                     <div class="row middle-xs">
                         <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
                             <path fill="#657c8f" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -114,26 +114,27 @@
                     <div class="row">
                         <div class="col-xs-6">
                             <label for="name">name</label>
-                            <input type="text" name="name" value="" required>
+                            <input type="text" name="entry.1638203786" id="entry.1638203786" value="" required>
                         </div>
                         <div class="col-xs-6">
                             <label for="email">email</label>
-                            <input type="text" name="email" value="" required>
+                            <input type="text" name="entry.1359325377" id="entry.1359325377" value="" required>
                         </div>
 
                         <div class="col-xs">
                             <label for="subject">subject</label>
-                            <input type="text" name="subject" value="">
+                            <input type="text" name="entry.170255939" id="entry.170255939" value="">
                         </div>
                         <div class="col-xs-12">
                             <label for="comment">message</label>
-                            <textarea type="text" name="comment" value=""></textarea>
+                            <textarea type="text" name="entry.1361273485" id="entry.1361273485" value=""></textarea>
                         </div>
                         <div class="col-xs">
                             <input type="submit" class="button" value="Submit">
                         </div>
                     </div>
                 </form>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
                 <div class="form-response"></div>
             </div>
             <div class="col-xs-12 col-sm-3 end-sm">
