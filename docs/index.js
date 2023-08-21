@@ -1,6 +1,6 @@
 
 
-Access-Control-Allow-Origin: https://www.https://github.com/Heritage-Oaks-Assisted-Living/liveyourheritage.com
+
 
 
 document.querySelector('.menu-icon-open').addEventListener('click', function () {
