@@ -52,8 +52,7 @@ if (main) {
 		data['$to'] = 'info@liveyourheritage.com';
 		data['$cc'] = 'ryan.reilly@liveyourheritage.com, reid.reilly@liveyourheritage.com';
 
-		fetch('
-https://forms.un-static.com/forms/8637a490c95992ea3f5c0eace45f5f683f895fef', {
+		fetch('https://forms.un-static.com/forms/8637a490c95992ea3f5c0eace45f5f683f895fef', {
 			method: 'post',
 			body: JSON.stringify(data)
 		}).then(function (result) {
