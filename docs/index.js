@@ -1,5 +1,12 @@
-
-
+'Access-Control-Allow-Origin:https://github.com/Heritage-Oaks-Assisted-Living/liveyourheritage.com';
+const express = require('express');
+const cors = require('cors');
+const app = express();
+// Allow requests from specific origins
+app.use(cors({
+  origin: ['https://github.com/Heritage-Oaks-Assisted-Living/liveyourheritage.com'],
+  methods: ['GET', 'POST'] // Specify the allowed HTTP methods
+}));
 
 
 
