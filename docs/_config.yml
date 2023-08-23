@@ -1,1 +1,7 @@
-
+redirects:
+  - from: /http://liveyourheritage.com
+    to: /https://www.liveyourheritage.com/
+  - from: /https://liveyourheritage.com
+    to: /https://www.liveyourheritage.com/
+     - from: /http://www.liveyourheritage.com
+    to: /https://www.liveyourheritage.com/
