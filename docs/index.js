@@ -1,4 +1,3 @@
-
 document.querySelector('.menu-icon-open').addEventListener('click', function () {
     document.querySelector('.menu').classList.add('active');
 });
